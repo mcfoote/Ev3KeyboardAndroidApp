@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Ev3Proj3.MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/vv_bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/vv_txtDebug"
+        android:layout_width="392dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/vv_bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/vv_btnForward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        android:contentDescription="forward"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_forward_icon" />
+
+    <ImageButton
+        android:id="@+id/vv_btnLeft"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#FFFFFF"
+        android:contentDescription="left"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/vv_btnBackward"
+        app:layout_constraintTop_toBottomOf="@+id/vv_btnForward"
+        app:srcCompat="@drawable/ic_left_icon" />
+
+    <ImageButton
+        android:id="@+id/vv_btnRight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:contentDescription="right"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/vv_btnBackward"
+        app:layout_constraintTop_toBottomOf="@+id/vv_btnForward"
+        app:srcCompat="@drawable/ic_right_icon" />
+
+    <ImageButton
+        android:id="@+id/vv_btnBackward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:contentDescription="back"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vv_btnForward"
+        app:srcCompat="@drawable/ic_backward_icon" />
+
+    <TextView
+        android:id="@+id/vv_txtSpeedBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Speed: 50"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/vv_speedBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vv_btnLeft" />
+
+    <TextView
+        android:id="@+id/vv_txtSpeedBarThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Speed: 50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/vv_txtDebug"
+        app:layout_constraintEnd_toStartOf="@+id/vv_speedBarThird"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/vv_btnForwardThird"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:contentDescription="forwardThird"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/vv_speedBarThird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_forward_icon" />
+
+    <ImageButton
+        android:id="@+id/vv_btnBackwardThird"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:contentDescription="backThird"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/vv_speedBarThird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_backward_icon" />
+
+    <SeekBar
+        android:id="@+id/vv_speedBar"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vv_btnBackward" />
+
+    <SeekBar
+        android:id="@+id/vv_speedBarThird"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="25dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintBottom_toTopOf="@+id/vv_txtDebug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/vv_btnReplay"
+        android:layout_width="98dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:text="Come Home!"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vv_speedBar" />
+
+    <Switch
+        android:id="@+id/vv_switchSpin"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:text="Spin Turn"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vv_speedBar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Third Wheel"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/vv_btnForwardThird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
